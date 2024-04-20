@@ -377,7 +377,7 @@ class Car {
     this.model = model;
   }
 } // Class
-
+```
 Classes are templates for creating objects.They encapsulate data with code to work on that data.
 
 There are two ways to define a class in JavaScript:
@@ -414,14 +414,17 @@ const Rectangle = class Rectangle2 {
 The `constructor` method is a special method for creating and initializing an object created with a class. There only can be one special method with the name `constructor` in a class. Otherwise, a `SyntaxError` will be thrown.
 
 ```js
-class Rectangle{
-  constructor(height, width){
+class Rectangle {
+  constructor(height, width) {
     {
       this.height = height;
       this.width = width;
     }
+  }
 }
 ```
+
+- `this` refers to the object it belongs to.
 
 **Methods**
 Methods are defined on the prototype of the class and share it among all instances of the class.
@@ -500,7 +503,6 @@ console.log(myRectangle.name); // Output: 'myRectangle'
 console.log(myRectangle.area()); // Output: 50
 ```
 
-`this` refers to the current instance of the class (object or function).
 It's also necessary if you want to use this in the constructor of the subclass, as this won't be available until after super() has been called and remember to add the arguments.
 
 ---
@@ -523,8 +525,6 @@ function outerFn(outerVariable) {
 const myOuterFn = outerFn("outer");
 myOuterFn("inner"); // Output: 'outer' 'inner'
 ```
-
-- `this` refers to the object it belongs to. Constructor functions and classes are blueprints for creating objects.
 
 1. **Cookies, Local Storage, Session Storage**
 

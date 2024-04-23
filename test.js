@@ -1,7 +1,8 @@
-const obj = {
-  name: "John",
-  age: 23,
-};
+function hello(name) {
+  return function innerFn(hey) {
+    console.log(hey, name);
+  };
+}
 
-obj.name = "Jane";
-console.log(obj.name); // Jane
+const h = hello("viet Anh");
+h("hello");
